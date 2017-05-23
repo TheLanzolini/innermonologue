@@ -1,0 +1,18 @@
+{
+  "name": "innermonologue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mono": "./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "request": "^2.81.0"
+  }
+}
