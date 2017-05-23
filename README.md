@@ -1,4 +1,4 @@
-#Gotta have node installed
+# Gotta have node installed
 
 `npm install -g` so it creates the links
 
