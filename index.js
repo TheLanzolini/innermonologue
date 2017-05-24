@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 var program = require('commander');
 var request = require('request');
-var webhook = require('./webhook.js');
+var webhook = "[webhook URL]"
 
 var messageVal;
 program
+  .option('-p, --phokal', 'Rename to Phokals Inner Monologue')
   .arguments('[message]')
   .action(function(message) {
     messageVal = message;
@@ -12,17 +13,18 @@ program
 
 program.parse(process.argv);
 
-if( !!messageVal ) {
-  console.log(messageVal)
-}
-
 var formData = {
   content: `_${messageVal}_`,
+}
+
+if(program.phokal) {
+  formData.username = "Phokal's Inner Monologue",
+  formData.avatar_url = "http://i.imgur.com/uqxjvXp.jpg"
 }
 
 request.post({url: webhook, formData: formData}, function optionalCallback(err, httpResponse, body) {
   if (err) {
     return console.error('upload failed:', err);
   }
-  console.log('Upload successful!  Server responded with:', body);
+  console.log('Monologue Sent', body);
 });
