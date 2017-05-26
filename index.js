@@ -17,7 +17,7 @@ var formData = {
   content: `_${messageVal}_`,
 }
 
-if(program.phokal) {
+if(program.spongebob) {
   formData.username = "Spongebob Says",
   formData.avatar_url = "http://i.imgur.com/uqxjvXp.jpg"
 }
