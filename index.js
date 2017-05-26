@@ -13,8 +13,14 @@ program
 
 program.parse(process.argv);
 
+function spongeText(text){
+  return text.split("").map(function(character, index){
+    return index % 2 == 0 ? character.toUpperCase() : character.toLowerCase()
+  }).join("");
+}
+
 var formData = {
-  content: `_${messageVal}_`,
+  content: `_${program.spongebob ? spongeText(messageVal) : messageVal}_`,
 }
 
 if(program.spongebob) {
