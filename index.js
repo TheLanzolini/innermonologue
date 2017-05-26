@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var program = require('commander');
 var request = require('request');
-var webhook = "https://discordapp.com/api/webhooks/316589437611933699/VnI0f9pCidkuGTtETy2QxuJAGUGZjOUCrQvjHFlYu5ibSAX8TQBBYtnCoRApHp2fyDNc"
+var webhook = "[webhook url]"
 
 var messageVal;
 program
